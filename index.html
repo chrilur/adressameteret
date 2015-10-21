@@ -7,9 +7,12 @@
     <script type="text/javascript" src="http://multimedia.bt.no/krinkelkroken/templates/charts/javascript/tabletop.js"></script>
     <script type="text/javascript" src="data/data.js"></script>
     <script type="text/javascript" src="data/code.js"></script>
-	<script src="http://code.highcharts.com/highcharts.js"></script>  
-    
-    
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+    <style type='text/css'>
+ 			#container {
+   				 background: url(http://statisk.bt.no/filer/lura/moustache2.jpg);
+					}
+ 	</style>
 <script>
     
     // Fix "null"
@@ -36,13 +39,12 @@
 				{
 					chart: {
 						renderTo: 'container',
+                        backgroundColor: 'transparent',
 						type: 'spline',
 						spacingBottom: 0,
 						marginRight: 30,
 						marginBottom: 40,
-            plotOptions:
-                    {linewidth: 5},
-					},
+                        },
 					credits : {
 						enabled : false
 					},
@@ -50,8 +52,8 @@
 						text: 'Adressameteret'
 					},
 					xAxis: {
-						     <!-- lineWidth: 0, -->
-				        labels: xaxisstandard,
+				        lineWidth: 0, 
+                        labels: xaxisstandard,
 						tickInterval: 10,
 						categories: uker
 					},
@@ -70,7 +72,7 @@
 						},
                     },
 					tooltip: number,
-					plotOptions: plotvalg,
+					plotOptions: {lineWidth: 50},
 					legend: legende,  
 					scrollbar: noscroll,
 					series: [adrtot, adrnett, adrmobil, bttot, btnett, btmobil]
