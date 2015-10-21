@@ -15,7 +15,7 @@ source('scrape.R')
 print(btadr)
 
 # Hent inn nye data
-new.data <- as.integer(readline("Uke: "))
+uke <- as.integer(readline("Uke: "))
 new.data <- as.integer(paste0(2015,uke))
 new.data2 <- adrnett
 new.data3 <- adrmob
