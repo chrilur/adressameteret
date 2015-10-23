@@ -40,3 +40,12 @@ btmob <- as.integer(unlist(btmob[3]))
 adrmob <- subset(tnsmob, tnsmob[,2] %in% adrmobref)
 adrmob <- as.integer(unlist(adrmob[3]))
 
+sbtnett <- subset(tnsnett, tnsnett[,5] %in% btnettref)
+sbtnett <- as.integer(unlist(btnett[3]))
+sadrnett <- subset(tnsnett, tnsnett[,5] %in% adrnettref)
+sadrnett <- as.integer(unlist(adrnett[3]))
+
+sbtmob <- subset(tnsmob, tnsmob[,5] %in% btmobref)
+sbtmob <- as.integer(unlist(btmob[3]))
+sadrmob <- subset(tnsmob, tnsmob[,5] %in% adrmobref)
+sadrmob <- as.integer(unlist(adrmob[3]))

@@ -3,8 +3,8 @@ library(RJSONIO)
 
 #Sett uke og medium
 uke <- c(1:42)
-adrnettref <- '<a href="http://www.adressa.no">Adressa.no</a>'
-adrmobref <- '<a href="">Adressa Mobil</a>'
+adrnettref <- '<a href="http://www.bt.no">Bergens Tidende</a>'
+adrmobref <- '<a href="http://mobil.bt.no/bt.mob">Bt Mobil</a>'
 adr <- data.frame()
 
 #Funksjon for å renske data
@@ -26,9 +26,9 @@ for (i in uke) {
         tnsnett <- rensk.data(tnsnett)
         tnsmob <- rensk.data(tnsmob)
         adrnett <- subset(tnsnett, tnsnett[,2] %in% adrnettref)
-        adrnett <- as.integer(unlist(adrnett[3]))
+        adrnett <- as.integer(unlist(adrnett[5]))
         adrmob <- subset(tnsmob, tnsmob[,2] %in% adrmobref)
-        adrmob <- as.integer(unlist(adrmob[3]))
+        adrmob <- as.integer(unlist(adrmob[5]))
         adruke <- c(adrnett, adrmob)
         adr <- rbind(adr, adruke)
         }
