@@ -1,15 +1,11 @@
 #Hente inn data
 btadr <- read.table('data/btadr.csv', sep=",", header=TRUE, stringsAsFactors=FALSE)
-sider <- read.table('data/sider.csv', sep=",", header=TRUE, stringsAsFactors=FALSE)
+sider <- read.table('data/sidev.csv', sep=",", header=TRUE, stringsAsFactors=FALSE)
 source('scrape.R')
-cat('Datasett: btadr, sider/n Sett datasett u for unike, s for sidevisninger og uke')
 
-#Fikse på dataene
-#names(btba) <- c('uke', 'btmob', 'bamob', 'prosmob', 'btmob1år', 'bamob1år', 'btnett', 'banett', 'prosnett', 'btnett1år', 'banett1år', 'bttotal', 'batotal', 'btmobvsba')
- hent.data <- function(data,uke) {
+print(sider)
 
 # Hent inn nye data
-#uke <- as.integer(readline("Uke: "))
 new.data1 <- as.integer(paste0(2015,uke))
 new.data2 <- adrnett
 new.data3 <- adrmob
@@ -74,5 +70,5 @@ sadrtot <- t(sider[,6])
 
 #Skriv ut dataene
 write.table(btadr, 'data/btadr.csv', sep=",", col.names=TRUE, row.names=FALSE)
-write.table(sider, 'data/sider.csv', sep=",", col.names=TRUE, row.names=FALSE)
+write.table(sider, 'data/sidev.csv', sep=",", col.names=TRUE, row.names=FALSE)
 write.table(jsfil, 'data/data.js', row.names=FALSE, col.names=FALSE, quote=FALSE)
