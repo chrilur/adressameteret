@@ -5,12 +5,12 @@
     <title>Bartometeret</title>
     <script type="text/javascript" src="http://multimedia.bt.no/krinkelkroken/templates/charts/javascript/jquery-1.8.2.min.js"></script> 
     <script type="text/javascript" src="http://multimedia.bt.no/krinkelkroken/templates/charts/javascript/tabletop.js"></script>
-    <script type="text/javascript" src="data/data.js"></script>
+    <script type="text/javascript" src="data/ratiodata.js"></script>
     <script type="text/javascript" src="data/code.js"></script>
 	<script src="http://code.highcharts.com/highcharts.js"></script>
     <style type='text/css'>
  			#container {
-   				 background: url(http://statisk.bt.no/filer/lura/moustache3.jpg);
+   				 background: url(http://statisk.bt.no/filer/lura/karsk5.jpg);
 					}
  	</style>
 <script>
@@ -26,7 +26,7 @@
         }
         return object;
     }            
-    var farger = ['#31a354', '#addd8e', '#f7fcb9', '#2b8cbe', '#a6bddb', '#ece7f2'];
+    var farger = ['#31a354', '#e34a33', '#dd1c77', '#c994c7'];
     
     Highcharts.setOptions(
 			{
@@ -52,8 +52,8 @@
 						text: 'Bartometeret'
 					},
           subtitle: {
-            text: 'Sidevisninger'
-          },
+  					text: 'Sidevisninger pr. unike bruker'
+					},
 					xAxis: {
 				        lineWidth: 0, 
                         labels: xaxisstandard,
@@ -61,13 +61,13 @@
 						categories: uker
 					},
 					yAxis: { 
-						min: 300000,
+						min: 3,
 						startOnTick: false,
 						minPadding: 0,
 						gridLineWidth: 0,
 						<!-- lineWidth: 0, -->
 						title: {
-							text: 'Sidevisninger, ukesnitt',
+							text: 'Sidevisninger / bruker, ukesnitt',
 							align: 'high'
 						},
 						labels: {
@@ -78,7 +78,7 @@
 					plotOptions: {lineWidth: 50},
 					legend: legende,  
 					scrollbar: noscroll,
-					series: [sadrtot, sadrnett, sadrmobil, sbttot, sbtnett, sbtmobil]
+					series: [ratioadrnett, ratioadrmob, ratiobtnett, ratiobtmob]
 				});
 			});
 
@@ -87,7 +87,7 @@
 <body style='margin:20px;padding:0px;'>
    
     <div id="container" style="height:600px;width:980px;margin:0px;padding:0px;"></div>
-    <p><a href="http://chrilur.github.io/adressameteret/ratio.html">Vis sidevisninger pr. unik bruker.</a></p>
+    <p><a href="http://chrilur.github.io/adressameteret/index.html">Vis unike brukere.</a></p>
     <p>Laget med <a href="https://www.r-project.org/">R</a>, <a href="https://www.javascript.com/">Javascript</a> og <a href="http://www.highcharts.com">Highcharts</a> av <a href="https://github.com/chrilur/adressameteret">Christian Lura.</a></p>
     <p><a href="http://chrilur.github.io/btbameteret/index.html">BTBAmeteret</a></p>
 </body>

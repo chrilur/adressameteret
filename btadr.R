@@ -72,3 +72,5 @@ sadrtot <- t(sider[,6])
 write.table(btadr, 'data/btadr.csv', sep=",", col.names=TRUE, row.names=FALSE)
 write.table(sider, 'data/sidev.csv', sep=",", col.names=TRUE, row.names=FALSE)
 write.table(jsfil, 'data/data.js', row.names=FALSE, col.names=FALSE, quote=FALSE)
+
+source('ratio.R')
