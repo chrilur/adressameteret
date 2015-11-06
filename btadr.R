@@ -3,8 +3,6 @@ btadr <- read.table('data/btadr.csv', sep=",", header=TRUE, stringsAsFactors=FAL
 sider <- read.table('data/sidev.csv', sep=",", header=TRUE, stringsAsFactors=FALSE)
 source('scrape.R')
 
-print(sider)
-
 # Hent inn nye data
 new.data1 <- as.integer(paste0(2015,uke))
 new.data2 <- adrnett
