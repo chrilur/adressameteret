@@ -4,7 +4,7 @@ sider <- read.table('data/sidev.csv', sep=",", header=TRUE, stringsAsFactors=FAL
 source('scrape.R')
 
 # Hent inn nye data
-new.data1 <- as.integer(paste0(2015,uke))
+new.data1 <- as.integer(paste0(2016,uke))
 new.data2 <- adrnett
 new.data3 <- adrmob
 new.data4 <- btnett
